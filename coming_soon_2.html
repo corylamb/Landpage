@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pinnacle Wound Supply — Coming Soon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="coming_soon_2.css">
+</head>
+<body>
+
+<div class="bg-base"></div>
+<div class="bg-grid"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<main class="page">
+
+  <div class="logo-wrap">
+    <img src="PWS.svg.svg">
+  </div>
+
+  <div class="line"></div>
+
+  <div class="badge">
+    <span class="dot"></span>
+    Website Coming Soon
+  </div>
+
+  <h1>Excellence in<br><em>Wound Care</em><br>Supply.</h1>
+
+  <p class="sub">
+    We're putting the finishing touches on our new website.
+    Pinnacle Wound Supply — 75+ years of expertise in post-surgical
+    and chronic wound care, coming online soon.
+  </p>
+
+  <div class="notify-wrap">
+    <div class="notify-label">If you would like more information</div>
+    <div class="notify-box" id="notifyBox">
+      <input type="email" id="emailInput" placeholder="Enter your email address">
+      <button onclick="handleNotify()">Contact Me</button>
+    </div>
+    <div class="success" id="successMsg">
+      ✓ &nbsp;You're on the list — we'll be in touch soon!
+    </div>
+  </div>
+
+  <div class="pillars">
+    <div class="pillar"><span class="pillar-tick"></span>75+ Years Experience</div>
+    <div class="pillar"><span class="pillar-tick"></span>600K+ Claims Processed</div>
+    <div class="pillar"><span class="pillar-tick"></span>Chronic &amp; Post-Surgical Care</div>
+    <div class="pillar"><span class="pillar-tick"></span>Direct-to-Patient Delivery</div>
+  </div>
+
+</main>
+
+<footer class="foot">
+  <p>© 2025 Pinnacle Wound Supply. All rights reserved.</p>
+  <a href="mailto:info@pinnaclewoundsupply.com">info@pinnaclewoundsupply.com</a>
+</footer>
+
+<script>
+  function handleNotify() {
+    const input = document.getElementById("emailInput");
+    const box   = document.getElementById("notifyBox");
+    const msg   = document.getElementById("successMsg");
+    if (!input.value.trim() || !input.value.includes("@")) {
+      input.style.color = "#ff7b7b";
+      input.focus();
+      setTimeout(() => input.style.color = "", 1200);
+      return;
+    }
+    box.style.display = "none";
+    msg.style.display = "flex";
+  }
+  document.getElementById("emailInput").addEventListener("keydown", e => {
+    if (e.key === "Enter") handleNotify();
+  });
+</script>
+
+</body>
+</html>
